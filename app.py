@@ -5,7 +5,7 @@ st.title('PNG CREWS Drought Update')
 ## April 2022
 """
 data = './file/drought_template June.pdf'
-st.download_button('Download file', data)
+st.download_button('Download Outlook', data)
 """
 ### Key messages
 New Ireland no longer at Drought Alert, however Drought Watch remains active across most north-eastern provinces that experienced severe rainfall deficiency in the past months. East New Britain was most at risk in February. 
@@ -58,7 +58,7 @@ col3.image('./img/mar_april2022.png')
 
 
 """
-### CLimate Context
+### Climate Context
 A summary of the relevant climate drivers affecting PNG over the coming months
 + ACCESS-S outlooks suggest a wet signal over the south of the mainland for May, becoming more widespread from June onwards.
 + La Niña is expected to end during May, with ENSO returning to neutral.
