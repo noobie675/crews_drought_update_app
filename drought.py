@@ -39,7 +39,7 @@ def dr_update(month,yr):
 
     sec3_head = st.subheader('Drought Risk Status')
     sec3_text = st.write('An indication of past drought risk based on drought hazard, exposure and vulnerability.\n+ East New Britain is still at a high-risk level as it has been in recent months; it should be closely monitored.\n+ Some provinces are at the Extreme risk level; East New Britain')
-    #up_subheader2 = (sec2_head, sec2_text)
+    #up_subheader3 = (sec3_head, sec3_text)
     """
     ### Drought Risk Status
     An indication of past drought risk based on drought hazard, exposure and vulnerability.
@@ -62,6 +62,9 @@ def dr_update(month,yr):
     """)
     col3.image('./img/mar_april2022.png')
     
+    sec4_head = st.subheader('Climate Context')
+    sec4_text = st.write('A summary of the relevant climate drivers affecting PNG over the coming months\n+ ACCESS-S outlooks suggest a wet signal over the south of the mainland for May, becoming more widespread from June onwards.\n+ La Niña is expected to end during May, with ENSO returning to neutral.\n+ There is the possibility of the development of a negative IOD from June onwards, but model skill is very low at this time of the year. Skill sharply increases from late May onwards.')
+    #up_subheader4 = (sec4_head, sec4_text)
     """
     ### CLimate Context
     A summary of the relevant climate drivers affecting PNG over the coming months
