@@ -1,0 +1,116 @@
+{
+   "author" : "nathan K yuave",
+   "organization" : "PNG National Weather Service",
+   "date_created" : "August 28, 2022",
+   "active" : true,
+   "name" : "PNG CREWS drought update",
+   "header" : "Drought Update",
+   "subheader" : [
+    {
+        "sub1" : "Key Messages",
+        "sub2" : "Drought Early Warning Status",
+        "sub3" : "Drought Risk Status",
+        "sub4" : "Climate Context"
+    }
+   ],
+   "outlooks" : [
+    {
+        "month" : "August",
+        "year" : "2022",
+        "date_issued": "August 15",
+        "pdf_path" : "./file/drought_template June.pdf",
+        "key_messages": "Drought Watch is active for most provinces across the country which is due to rainfall deficiencies in the last few months. Majority of the provinces are at severe drought risk whilst Chimbu, Gulf, Hela, Manus, Milne Bay New Ireland, Northern and Western Highlands are at moderate risk in July.",   
+        "drought_EW_status": {
+                "points" : [
+                    "Rainfall over the last month was notably below average in the Islands region including Bougainville, northern parts of East and West Sepik, Enga, Western Highlands, Morobe, Oro and Milne Bay Provinces.",
+                    "Rainfall over the last three months was below average across most provinces in the country, except Gulf, Southern Highlands, Hela and northern parts of Kiunga. ",
+                    "Vegetation health conditions indicate some mild vegetation stress present over East & West Sepik, Madang and Hela provinces.",
+                    "At the 6-month timescale, South Bougainville and parts of New Ireland province remain drought affected.",
+                    "Despite a wet forecast in the coming months, below average rainfall in the past months is contributing to a drought watch."
+                ],
+                "drought_summary" : {
+                    "watch" : "Bougainville, East New Britain, Manus, Milne Bay, Morobe, NCD, New Ireland and West New Britain",
+                    "alert" : "None",
+                    "critical" : "None"
+                },
+                "data" : {
+                    "3dri_img" : "./img/3dri_april2022.png"
+                }
+        },
+        "drought_R_status" : [
+            {
+                "points" : [
+                    "Bougainville, Central, East New Britain, East Sepik, Enga, Jiwaka, Madang, Morobe, NCD, Southern Highlands and West New Britain provinces are all at severe risk levels. The provinces will continue to be monitored.",
+                    "Chimbu, Gulf, Hela, Manus, Milne Bay, New Ireland, Northern and Western Highlands provinces are at moderate risk level."
+                ],
+                "drought_summary" : {
+                    "severe" : "Bougainville, Central, East New Britain, East Sepik, Enga, Jiwaka, Madang, Morobe, NCD, Southern Highlands, West New Britain",
+                    "extreme" : "Nil"
+                },
+                "data" : {
+                    "dr_maps" : [
+                        "./img/jan_2022.png",
+                        "./img/jan_2022.png",
+                        "./img/jan_2022.png"
+                    ]
+                }
+            }
+        ],
+        "climate_context" : {
+            "points" : [
+                "ACCESS-S outlooks suggest a wet outlook over most parts of the country in September, except Kavieng, Manus and south Bougainville showing drier conditions",
+                "La Niña is not present, however cooler than average sea surface temperatures in Central & Eastern pacific persist which may result in weak La Niña conditions. The chances of La Niña reforming in the coming months is at 50%.",
+                "A negative IOD is underway. The IOD continues to exceed negative IOD values over at least the last eight weeks."
+            ]
+        } 
+    },
+    {
+        "month" : "June",
+        "year" : "2022",
+        "date_issued": "June 9",
+        "pdf_path" : "./file/drought_template June.pdf",
+        "key_messages": "Gulf, Southern Highlands and Western have no drought conditions. Most provinces have been in drought watch in the last few months and remain at watch. East New Britain continues to be at extreme drought risk for the last three months whilst Central, West Sepik, Enga and Madang are in the second month of extreme",
+        "drought_EW_status":{
+                "points" : [
+                    "Rainfall over the last month was below average for most provinces except Hela, Southern Highlands and Western.",
+                    "Rainfall over the last three months was above average in Gulf, Central, Southern Highlands and northern parts of Western. However below average across most provinces in the",
+                    "Vegetation health conditions remains as it is showing mild stress over East and West Sepik and parts of the PNG Highlands areas.",
+                    "At the 6-month timescale, Bougainville remain drought affected."
+                ],
+                "drought_summary" : {
+                    "watch" : "Bougainville, Central, Chimbu, East New Britain, Eastern Highlands, Enga, Hela, Jiwaka, Morobe, NCD, New Ireland, West Sepik, Western Highlands",
+                    "alert" : "None",
+                    "critical" : "None"
+                },
+                "data" : {
+                    "3dri_img" : "./img/3dri_april2022.png"
+                }
+            },
+        "drought_R_status" :{
+                "points" : [
+                    "East New Britain remains at a high-risk level as it has been in recent months; it needs to be closely monitored.",
+                    "Most provinces are at a severe or extreme risk level into the second month."
+                ],
+                "drought_summary" : {
+                    "severe" : "Bougainville, Central, Chimbu, East Sepik, Eastern Highlands, Hela, Jiwaka, Morobe, New Ireland, Northern (Oro), West New Britain, Western Highlands",
+                    "extreme" : "East New Britain, West Sepik, Central, Enga, Madang, West New Britain,"
+                },
+                "data" : {
+                    "dr_maps" : [
+                        "./img/jan_2022.png",
+                        "./img/jan_2022.png",
+                        "./img/jan_2022.png"
+                    ]
+                }
+            },
+        "climate_context" : {
+            "points" : [
+                "ACCESS-S outlook shows wet conditions across most of PNG from July into the next three months. However, East and West Sepik predicted to remain drier in the same period.",
+                "La Niña continues to weaken with ENSO returning to neutral.",
+                "The IOD is currently at neutral state. There is possibility in development of a negative IOD in the next few month as model skills continue to improve."
+            ]
+        } 
+    }
+   ]
+   
+}
