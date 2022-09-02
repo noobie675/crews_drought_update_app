@@ -1,13 +1,11 @@
 # template for the crews drought update
 import streamlit as st
 
-def dr_update(month,yr):
+def dr_update(month):
+
+    st.header("Drought Update 2022")
     up_month = month
-    up_year = str(yr)
-    up_header = st.header(up_month + ' ' + up_year)
-    
-    data = './file/drought_template June.pdf'
-    st.download_button('Download Outlook', data)
+    up_header = st.header(up_month)
 
     sec1_head = st.subheader('Key Messages')
     sec1_text = st.write('New Ireland no longer at Drought Alert, however Drought Watch remains active across most north-eastern provinces that experienced severe rainfall deficiency in the past months. East New Britain was most at risk in February.')
@@ -18,8 +16,9 @@ def dr_update(month,yr):
     #up_subheader2 = (sec2_head, sec2_text)
 
     col1, col2 = st.columns(2)
-    col1.image('./img/vhi_april2022.png')
+    col1.image('./img/3dri_april2022.png')
     col2.write(" + March rainfall was notably below average for most provinces except Central Gulf, Southern Highlands and Western.\n + January–March rainfall was below average across provinces in the PNG highlands and in New Ireland, East/West New Britain and Bougainville which is contributing to the drought watch status for these provinces. \n + March vegetation health conditions remain similar to February with some mild vegetation stress present over New Ireland, East New Britain, Bougainville and parts of the PNG Highlands. \n + At the 6-month timescale, East New Britain, Bougainville and New Ireland remain drought affected.")
+    
     col1, col2 ,col3 = st.columns(3)
     d_watch = '<p style="color:yellow;font-size:18px">Drought Watch</p>'
     col1.markdown(d_watch, unsafe_allow_html=True)
