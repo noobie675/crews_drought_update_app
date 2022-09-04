@@ -1,9 +1,9 @@
 {
-   "author" : "nathan K yuave",
-   "organization" : "PNG National Weather Service",
+   "author" : "nathan k yuave",
+   "organization" : "Papua New Guinea National Weather Service",
    "date_created" : "August 28, 2022",
    "active" : true,
-   "name" : "PNG CREWS drought update",
+   "name" : "PNG CREWS Drought Update",
    "header" : "Drought Update",
    "subheader" : [
     {

@@ -52,12 +52,6 @@ def dr_update(month):
     sec3_head = st.subheader('Drought Risk Status')
     sec3_text = st.write('An indication of past drought risk based on drought hazard, exposure and vulnerability.\n+ East New Britain is still at a high-risk level as it has been in recent months; it should be closely monitored.\n+ Some provinces are at the Extreme risk level; East New Britain')
     #up_subheader3 = (sec3_head, sec3_text)
-    """
-    ### Drought Risk Status
-    An indication of past drought risk based on drought hazard, exposure and vulnerability.
-    + East New Britain is still at a high-risk level as it has been in recent months; it should be closely monitored.
-    + Some provinces are at the Extreme risk level; East New Britain 
-    """
 
     col1, col2 ,col3 = st.columns(3)
     col1.markdown("""
@@ -77,13 +71,6 @@ def dr_update(month):
     sec4_head = st.subheader('Climate Context')
     sec4_text = st.write('A summary of the relevant climate drivers affecting PNG over the coming months\n+ ACCESS-S outlooks suggest a wet signal over the south of the mainland for May, becoming more widespread from June onwards.\n+ La Niña is expected to end during May, with ENSO returning to neutral.\n+ There is the possibility of the development of a negative IOD from June onwards, but model skill is very low at this time of the year. Skill sharply increases from late May onwards.')
     #up_subheader4 = (sec4_head, sec4_text)
-    """
-    ### CLimate Context
-    A summary of the relevant climate drivers affecting PNG over the coming months
-    + ACCESS-S outlooks suggest a wet signal over the south of the mainland for May, becoming more widespread from June onwards.
-    + La Niña is expected to end during May, with ENSO returning to neutral.
-    + There is the possibility of the development of a negative IOD from June onwards, but model skill is very low at this time of the year. Skill sharply increases from late May onwards.
-    """
 st.sidebar.header("Climate Risk and Early Warning Systems (CREWS)")
 
 with st.sidebar.container():
@@ -95,12 +82,10 @@ if genre == 'Drought Update':
     col1, col2 ,col3 = st.columns(3)
     option1 = col1.selectbox('Select Month',
      ('April', 'March', 'February'))
-
     data = './file/drought_template June.pdf'
     col3.text('Get the PDF version')
     col3.download_button('Download Outlook', data)
     mon = option1
-    yr = 2022
     dr_update(mon)
 else:
     st.title('PAGE UNDER CONSTRUCTION')
