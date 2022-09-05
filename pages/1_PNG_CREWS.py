@@ -1,6 +1,4 @@
 import streamlit as st
-from fpdf import FPDF
-import base64
 import json
 
 st.set_page_config(page_title="CREWS_PNG", page_icon="📈")
