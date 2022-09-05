@@ -52,6 +52,11 @@
                         "./img/jan_2022.png",
                         "./img/jan_2022.png",
                         "./img/jan_2022.png"
+                    ],
+                    "dr_header" : [
+                        "May",
+                        "June",
+                        "July"
                     ]
                 }
             },
@@ -99,6 +104,11 @@
                         "./img/jan_2022.png",
                         "./img/jan_2022.png",
                         "./img/jan_2022.png"
+                    ],
+                    "dr_header" : [
+                        "March",
+                        "April",
+                        "May"
                     ]
                 }
             },
@@ -111,5 +121,5 @@
         } 
     }
    ]
-   
+
 }

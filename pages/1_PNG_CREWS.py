@@ -23,6 +23,13 @@ def dr_update(month):
     with st.spinner(text='In progress'):
         up_month = dr_scan(month)
 
+    def looper(arr, col = None):
+        if col :
+            for a in arr:
+                col.markdown('+ ' + a)
+        else:
+            markdown('+ ' + a)
+    
     header = outlooks['header'] + ' ' + up_month['year']
     st.header(header)
     
@@ -38,10 +45,10 @@ def dr_update(month):
     sec2_head = st.subheader('Drought Early Warning Status')
     sec2_text = st.write('Derived from observed rainfall and vegetation health; and forecasted rainfall.')
     #up_subheader2 = (sec2_head, sec2_text)
-
     col1, col2 = st.columns(2)
     col1.image('./img/3dri_april2022.png')
-    col2.write(" + March rainfall was notably below average for most provinces except Central Gulf, Southern Highlands and Western.\n + January–March rainfall was below average across provinces in the PNG highlands and in New Ireland, East/West New Britain and Bougainville which is contributing to the drought watch status for these provinces. \n + March vegetation health conditions remain similar to February with some mild vegetation stress present over New Ireland, East New Britain, Bougainville and parts of the PNG Highlands. \n + At the 6-month timescale, East New Britain, Bougainville and New Ireland remain drought affected.")
+    looper(up_month['drought_EW_status']['points'],col2)
+    
     
     col1, col2 ,col3 = st.columns(3)
     ## drought watch
@@ -59,26 +66,23 @@ def dr_update(month):
     col3.markdown(up_month['drought_EW_status']['drought_summary']['critical'])
 
     sec3_head = st.subheader('Drought Risk Status')
-    sec3_text = st.write('An indication of past drought risk based on drought hazard, exposure and vulnerability.\n+ East New Britain is still at a high-risk level as it has been in recent months; it should be closely monitored.\n+ Some provinces are at the Extreme risk level; East New Britain')
+    sec3_text = st.write('An indication of past drought risk based on drought hazard, exposure and vulnerability.')
+    looper(up_month['drought_R_status']['points'],st)
     #up_subheader3 = (sec3_head, sec3_text)
 
     col1, col2 ,col3 = st.columns(3)
-    col1.markdown("""
-    #### January 2022
-    """)
+    col1.subheader(up_month['drought_R_status']['data']['dr_header'][0] + ' ' + up_month['year'])
     col1.image('./img/jan_2022.png')
-    col2.markdown("""
-    #### February 2022
-    """)
+    
+    col2.subheader(up_month['drought_R_status']['data']['dr_header'][1] + ' ' + up_month['year'])
     col2.image('./img/feb_2022.png')
 
-    col3.markdown("""
-    #### March 2022
-    """)
+    col3.subheader(up_month['drought_R_status']['data']['dr_header'][2] + ' ' + up_month['year'])
     col3.image('./img/mar_2022.png')
     
     sec4_head = st.subheader('Climate Context')
-    sec4_text = st.write('A summary of the relevant climate drivers affecting PNG over the coming months\n+ ACCESS-S outlooks suggest a wet signal over the south of the mainland for May, becoming more widespread from June onwards.\n+ La Niña is expected to end during May, with ENSO returning to neutral.\n+ There is the possibility of the development of a negative IOD from June onwards, but model skill is very low at this time of the year. Skill sharply increases from late May onwards.')
+    sec4_text = st.write('A summary of the relevant climate drivers affecting PNG over the coming months.')
+    looper(up_month['climate_context']['points'],st)
     #up_subheader4 = (sec4_head, sec4_text)
 st.sidebar.header("Climate Risk and Early Warning Systems (CREWS)")
 
