@@ -37,7 +37,7 @@
                     "3dri_img" : "./img/3dri_april2022.png"
                 }
         },
-        "drought_R_status" : [
+        "drought_R_status" :
             {
                 "points" : [
                     "Bougainville, Central, East New Britain, East Sepik, Enga, Jiwaka, Madang, Morobe, NCD, Southern Highlands and West New Britain provinces are all at severe risk levels. The provinces will continue to be monitored.",
@@ -54,8 +54,7 @@
                         "./img/jan_2022.png"
                     ]
                 }
-            }
-        ],
+            },
         "climate_context" : {
             "points" : [
                 "ACCESS-S outlooks suggest a wet outlook over most parts of the country in September, except Kavieng, Manus and south Bougainville showing drier conditions",
