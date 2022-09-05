@@ -1,5 +1,6 @@
 import streamlit as st
-import time
+from fpdf import FPDF
+import base64
 import json
 
 st.set_page_config(page_title="CREWS_PNG", page_icon="📈")
@@ -73,7 +74,7 @@ def dr_update(month):
     col1, col2 ,col3 = st.columns(3)
     col1.subheader(up_month['drought_R_status']['data']['dr_header'][0] + ' ' + up_month['year'])
     col1.image('./img/jan_2022.png')
-    
+
     col2.subheader(up_month['drought_R_status']['data']['dr_header'][1] + ' ' + up_month['year'])
     col2.image('./img/feb_2022.png')
 
@@ -84,6 +85,22 @@ def dr_update(month):
     sec4_text = st.write('A summary of the relevant climate drivers affecting PNG over the coming months.')
     looper(up_month['climate_context']['points'],st)
     #up_subheader4 = (sec4_head, sec4_text)
+
+
+def pdf_download(mnth, col):
+    month = dr_scan(mnth)
+    pdf_path = month['pdf_path']
+
+    with open(pdf_path, "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+    
+    pdf_name = month['month'] + month['year'] + '_' + outlooks['header']
+    col.download_button(label="Download Outlook",
+                    data=PDFbyte,
+                    file_name= pdf_name + ".pdf",
+                    mime='application/octet-stream')
+
+
 st.sidebar.header("Climate Risk and Early Warning Systems (CREWS)")
 
 with st.sidebar.container():
@@ -95,10 +112,9 @@ if genre == 'Drought Update':
     col1, col2 ,col3 = st.columns(3)
     option1 = col1.selectbox('Select Month',
      ('August', 'June'))
-    data = './file/drought_template June.pdf'
     col3.text('Get the PDF version')
-    col3.download_button('Download Outlook', data)
     mon = option1
+    pdf_download(mon,col3)
     dr_update(mon)
 else:
     st.title('PAGE UNDER CONSTRUCTION')
