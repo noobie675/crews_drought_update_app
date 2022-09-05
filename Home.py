@@ -13,7 +13,6 @@ with open ('style.css') as f:
 st.subheader('Papua New Guinea National Weather Service')
 st.write("# Climatology")
 
-
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
