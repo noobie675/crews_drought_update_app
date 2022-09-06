@@ -71,13 +71,13 @@ def dr_update(month):
 
     col1, col2 ,col3 = st.columns(3)
     col1.subheader(up_month['drought_R_status']['data']['dr_header'][0] + ' ' + up_month['year'])
-    col1.image('./img/jan_2022.png')
+    col1.image(up_month['drought_R_status']['data']['dr_maps'][0])
 
     col2.subheader(up_month['drought_R_status']['data']['dr_header'][1] + ' ' + up_month['year'])
-    col2.image('./img/feb_2022.png')
+    col2.image(up_month['drought_R_status']['data']['dr_maps'][1])
 
     col3.subheader(up_month['drought_R_status']['data']['dr_header'][2] + ' ' + up_month['year'])
-    col3.image('./img/mar_2022.png')
+    col3.image(up_month['drought_R_status']['data']['dr_maps'][2])
     
     sec4_head = st.subheader('Climate Context')
     sec4_text = st.write('A summary of the relevant climate drivers affecting PNG over the coming months.')

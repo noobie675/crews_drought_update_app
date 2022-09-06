@@ -49,9 +49,9 @@
                 },
                 "data" : {
                     "dr_maps" : [
-                        "./img/jan_2022.png",
-                        "./img/jan_2022.png",
-                        "./img/jan_2022.png"
+                        "./img/may_2022.png",
+                        "./img/jun_2022.png",
+                        "./img/jul_2022.png"
                     ],
                     "dr_header" : [
                         "May",
@@ -101,9 +101,9 @@
                 },
                 "data" : {
                     "dr_maps" : [
-                        "./img/jan_2022.png",
-                        "./img/jan_2022.png",
-                        "./img/jan_2022.png"
+                        "./img/mar_2022.png",
+                        "./img/apr_2022.png",
+                        "./img/may_2022.png"
                     ],
                     "dr_header" : [
                         "March",
